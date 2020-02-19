@@ -33,6 +33,7 @@ const initialState = {
                 ...state,
                 car: {
                     ...state.car,
+                    price: state.car.price - action.payload.price,
                     features: state.car.features.filter(item => item.id !== action.payload.id)
                 }
             }
